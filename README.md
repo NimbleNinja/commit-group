@@ -1,50 +1,39 @@
-# Welcome to your Expo app 👋
+# Мобільний додаток для створення заявок та оцінювання виконавців
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Опис проєкту
 
-## Get started
+Цей мобільний додаток дозволяє користувачам створювати заявки на послуги, отримувати пропозиції від виконавців та оцінювати їх після виконання робіт. Додаток розроблений з використанням **React Native** та **Firebase** для забезпечення кросплатформності та надійного зберігання даних.
 
-1. Install dependencies
+## Функціональні можливості
+
+1. **Додавання заявки (користувач):**
+
+   - Додавання фото або відео.
+   - Опис проблеми.
+   - Вибір категорії послуги.
+   - Натискання "Опублікувати заявку" для збереження у Firebase.
+
+2. **Перегляд списку заявок:**
+
+   - Перегляд деталей заявки.
+   - Подання пропозиції (ціна, термін, коментар).
+   - Натискання "Відправити пропозицію" для збереження у Firebase.
+
+3. **Оцінка після виконання:**
+   - Вибір кількості зірок (1-5).
+   - Можливість залишити коментар.
+   - Дані зберігаються у Firebase.
+
+## Технології
+
+- **React Native:** Фреймворк для розробки кросплатформних мобільних додатків.
+- **Firebase:** Платформа для зберігання даних та аутентифікації.
+
+## Встановлення та запуск
+
+1. **Клонування репозиторію:**
 
    ```bash
-   npm install
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
