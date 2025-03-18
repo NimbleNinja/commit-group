@@ -18,11 +18,11 @@ export default function HomeScreen() {
         </Text>
         <Text h4>
           4. To offer yourself as a performer, press "Applications" tab than go
-          to details page and press "propose execution".
+          to details page and press "Make an offer".
         </Text>
         <Text h4>
-          5. To transfer the application to the status "successfully completed"
-          and evaluate the work go to details page and press "save as complete".
+          5. To transfer the application to the status "completed" and evaluate
+          the work go to details page and press "Leave a review".
         </Text>
       </View>
     </SafeAreaView>

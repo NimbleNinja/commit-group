@@ -25,8 +25,6 @@ export default function NewApplication() {
       mediaTypes: ["images", "videos"],
     });
 
-    console.log(result);
-
     if (!result.canceled) {
       setFile(result.assets[0]);
     }
@@ -47,7 +45,6 @@ export default function NewApplication() {
       file: null,
     };
 
-    //1. save media file
     if (file && file.mimeType) {
       const fileMimeType = file.mimeType.split("/");
       const fileType = fileMimeType[0];
@@ -70,13 +67,10 @@ export default function NewApplication() {
       }
     }
 
-    //2. save application with file download url
-
     try {
       const db = getFirestore();
       await setDoc(doc(db, "applications", application.id), application);
       router.replace("/applications");
-      console.log("Application created");
     } catch (error) {
       console.log("error during save application: ", error);
       setLoad(false);
@@ -129,16 +123,20 @@ export default function NewApplication() {
           onValueChange={(value) =>
             setValues((prev) => ({ ...prev, category: value }))
           }
-          placeholder={{ label: "Category 1", value: Category.category1 }}
           value={values.category}
           items={[
-            // { label: "Category 1", value: Category.category1 },
+            { label: "Category 1", value: Category.category1 },
             { label: "Category 2", value: Category.category2 },
             { label: "Category 3", value: Category.category3 },
           ]}
         />
-        <Button title="chose file" onPress={pickFile} loading={load} />
-        <Button title="save" onPress={handleSave} loading={load} />
+        <Button title="CHOSE FILE" onPress={pickFile} loading={load} />
+        <Button
+          title="PUBLISH AN APPLICATION"
+          onPress={handleSave}
+          loading={load}
+          color="green"
+        />
       </View>
     </SafeAreaView>
   );
@@ -158,5 +156,8 @@ const styles = StyleSheet.create({
   },
   fileView: {
     height: 300,
+  },
+  btn: {
+    textTransform: "uppercase",
   },
 });

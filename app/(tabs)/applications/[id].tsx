@@ -147,13 +147,13 @@ export default function ApplicationPage() {
         {application.status === "new" && (
           <View style={styles.actions}>
             <Button
-              title="make an offer"
+              title="MAKE AN OFFER"
               onPress={() => setOfferFormVisible((prev) => !prev)}
               disabled={ratingFormVisible || load}
             />
             {application.offers.length > 0 && (
               <Button
-                title="leave a review"
+                title="LEAVE A REVIEW"
                 color="green"
                 onPress={() => setRatingFormVisible((prev) => !prev)}
                 disabled={offerFormVisible || load}
@@ -191,7 +191,7 @@ export default function ApplicationPage() {
                 setOfferValues((prev) => ({ ...prev, comment: val }))
               }
             />
-            <Button title="save" onPress={handleOffer} loading={load} />
+            <Button title="SAVE" onPress={handleOffer} loading={load} />
           </Card>
         )}
         {application.offers.length > 0 &&
@@ -237,7 +237,7 @@ export default function ApplicationPage() {
                 setRatingValues((prev) => ({ ...prev, comment: val }))
               }
             />
-            <Button title="save" loading={load} onPress={handleReviewRating} />
+            <Button title="SAVE" loading={load} onPress={handleReviewRating} />
           </Card>
         )}
         {application.status === "complete" && application.review && (
